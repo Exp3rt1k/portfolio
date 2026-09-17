@@ -617,11 +617,10 @@ footer {
     .grid {
         grid-template-columns: 1fr;
     }
-}
-/* Портфолио — 3 в ряд */
+/* Портфолио — карточки в ряд */
 #portfolio .grid {
     display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
     gap: 25px !important;
 }
 

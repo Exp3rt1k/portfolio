@@ -618,4 +618,10 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* Портфолио — 3 в ряд */
+#portfolio .grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 25px !important;
+}
 

@@ -406,3 +406,20 @@ footer {
         height: 350px;
     }
 }
+/* Навыки — 2 в ряд */
+#skills .cards-row {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Портфолио — 3 в ряд */
+#portfolio .cards-row {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* На телефоне — всё в 1 колонку */
+@media screen and (max-width: 768px) {
+    #skills .cards-row,
+    #portfolio .cards-row {
+        grid-template-columns: 1fr;
+    }
+}

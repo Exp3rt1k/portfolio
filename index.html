@@ -1,117 +1,465 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Портфолио — Саша</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saanchoys — разработка сайтов и UI/UX дизайн</title>
+  <meta name="description" content="Создаю современные сайты, лендинги и интерфейсы. Быстро, аккуратно, с душой." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Unbounded:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-    <!-- ===== БОКОВАЯ ПАНЕЛЬ ===== -->
-    <aside class="sidebar">
-        <div class="sidebar-icon">⚡</div>
-        <nav class="sidebar-nav">
-            <a href="index.html">
-                <span class="icon">🏠</span>
-                <span class="label">Главная</span>
+  <!-- ============ 1. ШАПКА ============ -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo">saanchoys<span>.</span></a>
+
+      <nav class="nav" id="nav">
+        <a href="#works">Проекты</a>
+        <a href="#pricing">Услуги</a>
+        <a href="#process">Процесс</a>
+        <a href="#about">Обо мне</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="tel:+70000000000" class="header__phone">+7 (000) 000-00-00</a>
+        <a href="https://t.me/Saanchoys" target="_blank" rel="noopener" class="btn btn--accent btn--sm">
+          Обсудить проект
+        </a>
+        <button class="burger" id="burger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ 2. HERO ============ -->
+    <section class="hero section--dark">
+      <div class="container hero__inner">
+        <div class="hero__text reveal">
+          <h1 class="hero__title">
+            Создаю сайты,<br />
+            которые <span class="accent">продают</span><br />
+            и запоминаются
+          </h1>
+          <p class="hero__subtitle">
+            Привет! Меня зовут Саша. Разрабатываю лендинги, сайты-визитки и
+            корпоративные веб-продукты с акцентом на дизайн и скорость.
+          </p>
+
+          <div class="hero__buttons">
+            <a href="https://t.me/Saanchoys" target="_blank" rel="noopener" class="btn btn--accent">
+              Обсудить проект
             </a>
-            <a href="services.html">
-                <span class="icon">💰</span>
-                <span class="label">Услуги и цены</span>
+            <a href="#works" class="btn btn--ghost">Смотреть работы</a>
+          </div>
+
+          <ul class="hero__features">
+            <li><span class="icon">⚡</span> Срок от 5 дней</li>
+            <li><span class="icon">🎯</span> Фокус на результат</li>
+            <li><span class="icon">💬</span> На связи 24/7</li>
+          </ul>
+        </div>
+
+        <div class="hero__image reveal">
+          <!-- Вместо фото — стилизованная карточка со стеком -->
+          <div class="hero__card">
+            <div class="hero__card-head">
+              <span class="hero__dot"></span>
+              <span class="hero__dot"></span>
+              <span class="hero__dot"></span>
+            </div>
+            <div class="hero__card-body">
+              <p class="hero__card-label">Мой стек</p>
+              <ul class="hero__stack">
+                <li>Python</li>
+                <li>Flask</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Figma</li>
+                <li>Git</li>
+              </ul>
+              <p class="hero__card-note">Собираю сайты быстро, аккуратно и с вниманием к деталям</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. БЕГУЩАЯ СТРОКА ============ -->
+    <section class="marquee">
+      <div class="marquee__track">
+        <span>Web-разработка • UI/UX дизайн • Верстка • Flask • Адаптив • Анимации • </span>
+        <span>Web-разработка • UI/UX дизайн • Верстка • Flask • Адаптив • Анимации • </span>
+        <span>Web-разработка • UI/UX дизайн • Верстка • Flask • Адаптив • Анимации • </span>
+      </div>
+    </section>
+
+    <!-- ============ 4. РАБОТЫ ============ -->
+    <section class="section section--light" id="works">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__num">01</span>
+          <h2 class="section__title">Работы</h2>
+        </div>
+
+        <div class="works-grid">
+          <article class="work-card reveal">
+            <a href="https://exp3rt1k.github.io/lumen-studio/" target="_blank" rel="noopener">
+              <div class="work-card__img">
+                <img src="images/lumen.jpg" alt="LUMEN Studio — сайт фотостудии" loading="lazy" />
+              </div>
             </a>
-            <a href="contact.html">
-                <span class="icon">📞</span>
-                <span class="label">Связаться</span>
+            <h3>LUMEN Studio</h3>
+            <p>Сайт фотостудии в Москве: аренда залов, съёмки и ретушь. Светлый, воздушный дизайн с акцентом на визуал.</p>
+            <ul class="tags">
+              <li>Сайт</li><li>Дизайн</li><li>Вёрстка</li>
+            </ul>
+            <a href="https://exp3rt1k.github.io/lumen-studio/" target="_blank" rel="noopener" class="btn btn--dark btn--sm" style="margin-top:14px">Смотреть сайт</a>
+          </article>
+
+          <article class="work-card reveal">
+            <a href="https://exp3rt1k.github.io/CINEFINDER/" target="_blank" rel="noopener">
+              <div class="work-card__img">
+                <img src="images/cinefinder.jpg" alt="CINEFINDER — подбор фильмов" loading="lazy" />
+              </div>
             </a>
-        </nav>
-    </aside>
+            <h3>CINEFINDER</h3>
+            <p>Сервис подбора фильмов на вечер: фильтры по жанру, эпохе и длительности. Тёмный интерфейс с акцентом на контент.</p>
+            <ul class="tags">
+              <li>Веб-приложение</li><li>UI/UX</li><li>JavaScript</li>
+            </ul>
+            <a href="https://exp3rt1k.github.io/CINEFINDER/" target="_blank" rel="noopener" class="btn btn--dark btn--sm" style="margin-top:14px">Смотреть сайт</a>
+          </article>
+        </div>
 
-    <!-- ===== ГЛАВНЫЙ ЭКРАН ===== -->
-    <section class="hero">
-        <div class="hero-content">
-            <p class="hero-tag">Привет, я —</p>
-            <h1 class="hero-title">Саша</h1>
-            <p class="hero-subtitle">Веб-разработчик. Создаю сайты, которые работают и приносят результат.</p>
-            <div class="hero-buttons">
-                <a href="contact.html" class="btn-primary">Заказать сайт</a>
-                <a href="#portfolio" class="btn-ghost">Смотреть работы</a>
+        <div class="section__cta reveal">
+          <a href="https://t.me/Saanchoys" target="_blank" rel="noopener" class="btn btn--dark">Все проекты</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. ОТЗЫВЫ ============ -->
+    <section class="section section--dark" id="reviews">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__num">02</span>
+          <h2 class="section__title">Отзывы</h2>
+        </div>
+
+        <div class="reviews">
+          <aside class="reviews__tabs reveal">
+            <button class="reviews__tab is-active" data-review="0">Aurora</button>
+            <button class="reviews__tab" data-review="1">Nova</button>
+            <button class="reviews__tab" data-review="2">Rex</button>
+          </aside>
+
+          <div class="reviews__window reveal">
+            <div class="reviews__slide is-active" data-slide="0">
+              <div class="reviews__logo">Aurora</div>
+              <p>«Саша сделал нам магазин, который не стыдно показать. Всё быстро, аккуратно, с вниманием к деталям. Конверсия выросла уже в первый месяц.»</p>
+              <a href="https://t.me/Saanchoys" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">Смотреть проект</a>
             </div>
-        </div>
-        <div class="hero-glow"></div>
-    </section>
-
-    <!-- ===== О СЕБЕ ===== -->
-    <section class="section" id="about">
-        <div class="container">
-            <p class="section-tag">Обо мне</p>
-            <h2 class="section-title">Кто я такой</h2>
-            <p class="section-text">Мне 15 лет, я занимаюсь веб-разработкой. Делаю современные, адаптивные сайты, которые работают на любых устройствах. Быстро, качественно и недорого.</p>
-        </div>
-    </section>
-
-    <!-- ===== НАВЫКИ ===== -->
-    <section class="section" id="skills">
-        <div class="container">
-            <p class="section-tag">Навыки</p>
-            <h2 class="section-title">Что я умею</h2>
-            <div class="cards-row">
-                <div class="card">
-                    <div class="card-icon">🧱</div>
-                    <h3>HTML5</h3>
-                    <p>Семантическая вёрстка, структура сайта</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🎨</div>
-                    <h3>CSS3</h3>
-                    <p>Адаптивный дизайн, анимации, градиенты</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">⚙️</div>
-                    <h3>JavaScript</h3>
-                    <p>Интерактив, викторины, слайдеры, логика</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🚀</div>
-                    <h3>GitHub Pages</h3>
-                    <p>Публикация сайтов в интернете</p>
-                </div>
+            <div class="reviews__slide" data-slide="1">
+              <div class="reviews__logo">Nova</div>
+              <p>«Отличный лендинг! Ребята из команды в восторге от анимаций и продуманной структуры. Спасибо за скорость и терпение.»</p>
+              <a href="https://t.me/Saanchoys" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">Смотреть проект</a>
             </div>
-        </div>
-    </section>
-
-    <!-- ===== ПОРТФОЛИО ===== -->
-    <section class="section" id="portfolio">
-        <div class="container">
-            <p class="section-tag">Работы</p>
-            <h2 class="section-title">Моё портфолио</h2>
-            <div class="cards-row">
-                <div class="card work-card">
-                    <div class="work-preview">🏒</div>
-                    <h3>Фан-сайт ХК Авангард</h3>
-                    <p>Состав, новости, фан-зона и викторина</p>
-                    <a href="https://exp3rt1k.github.io/avangard-site/" target="_blank" class="btn-small">Открыть</a>
-                </div>
-                <div class="card work-card">
-                    <div class="work-preview">📸</div>
-                    <h3>Фотостудия LUMEN</h3>
-                    <p>Многостраничный сайт с галереей и фильтрами</p>
-                    <a href="https://exp3rt1k.github.io/lumen-studio/" target="_blank" class="btn-small">Открыть</a>
-                </div>
-                <div class="card work-card">
-                    <div class="work-preview">💅</div>
-                    <h3>Сайт для салона</h3>
-                    <p>Услуги, цены, онлайн-запись</p>
-                    <span class="badge">Скоро</span>
-                </div>
+            <div class="reviews__slide" data-slide="2">
+              <div class="reviews__logo">Rex</div>
+              <p>«Работали с Сашей над корпоративным сайтом. Всё чётко по срокам, документация, обучение по CMS — на высоте. Рекомендую!»</p>
+              <a href="https://t.me/Saanchoys" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">Смотреть проект</a>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- ===== ПОДВАЛ ===== -->
-    <footer>
-        <p>© 2026 Саша. Сделано с любовью</p>
-    </footer>
+    <!-- ============ 6. ТАРИФЫ ============ -->
+    <section class="section section--light" id="pricing">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__num">03</span>
+          <h2 class="section__title">Услуги</h2>
+        </div>
 
+        <div class="pricing">
+          <article class="price-card reveal">
+            <h3>Сайт-визитка</h3>
+            <div class="price-card__price">от 25 000 ₽</div>
+            <ul class="check-list">
+              <li>До 3 страниц</li>
+              <li>Адаптив под мобильные</li>
+              <li>Базовое SEO</li>
+              <li>Форма связи</li>
+            </ul>
+            <a href="https://t.me/Saanchoys" target="_blank" rel="noopener" class="btn btn--dark btn--full">Обсудить макет</a>
+          </article>
+
+          <article class="price-card price-card--featured reveal">
+            <h3>Лендинг</h3>
+            <div class="price-card__price">от 45 000 ₽</div>
+            <ul class="check-list">
+              <li>Одностраничник с анимациями</li>
+              <li>Уникальный дизайн</li>
+              <li>Адаптив + мобильная версия</li>
+              <li>Форма заявки + аналитика</li>
+              <li>Скорость загрузки &lt; 2с</li>
+            </ul>
+            <a href="https://t.me/Saanchoys" target="_blank" rel="noopener" class="btn btn--accent btn--full">Обсудить макет</a>
+          </article>
+
+          <article class="price-card reveal">
+            <h3>Корпоративный сайт</h3>
+            <div class="price-card__price">от 90 000 ₽</div>
+            <ul class="check-list">
+              <li>Многостраничный сайт</li>
+              <li>CMS (WordPress / кастом)</li>
+              <li>Интеграция с CRM</li>
+              <li>Обучение по админке</li>
+            </ul>
+            <a href="https://t.me/Saanchoys" target="_blank" rel="noopener" class="btn btn--dark btn--full">Обсудить макет</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7. ЭТАПЫ РАБОТЫ ============ -->
+    <section class="section section--light" id="process">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__num">04</span>
+          <h2 class="section__title">Этапы работы</h2>
+        </div>
+
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step__num">01</div>
+            <h4>Задача и смета</h4>
+            <p>Обсуждаем цели, аудиторию и формируем смету с фиксированными сроками.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step__num">02</div>
+            <h4>Структура и дизайн</h4>
+            <p>Прототип, структура страниц, согласование дизайн-макета.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step__num">03</div>
+            <h4>Разработка и проверка</h4>
+            <p>Верстка, программирование, тесты на устройствах и браузерах.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step__num">04</div>
+            <h4>Запуск и передача</h4>
+            <p>Публикация, настройка хостинга, обучение и сопровождение.</p>
+          </div>
+        </div>
+
+        <p class="process-note reveal">* Точные сроки и стоимость зависят от сложности проекта и оговариваются индивидуально.</p>
+      </div>
+    </section>
+
+    <!-- ============ 8. КАЛЬКУЛЯТОР ============ -->
+    <section class="section section--dark" id="calculator">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__num">05</span>
+          <h2 class="section__title">Калькулятор стоимости</h2>
+        </div>
+
+        <div class="calc reveal">
+          <div class="calc__options" id="calcOptions">
+            <div class="calc__group">
+              <h4>Тип сайта</h4>
+              <div class="calc__buttons">
+                <button class="calc-btn is-active" data-price="25000" data-group="type">Визитка</button>
+                <button class="calc-btn" data-price="45000" data-group="type">Лендинг</button>
+                <button class="calc-btn" data-price="90000" data-group="type">Корпоративный</button>
+              </div>
+            </div>
+            <div class="calc__group">
+              <h4>Дизайн</h4>
+              <div class="calc__buttons">
+                <button class="calc-btn is-active" data-price="0" data-group="design">По шаблону</button>
+                <button class="calc-btn" data-price="15000" data-group="design">Уникальный</button>
+                <button class="calc-btn" data-price="30000" data-group="design">Премиум</button>
+              </div>
+            </div>
+            <div class="calc__group">
+              <h4>CMS</h4>
+              <div class="calc__buttons">
+                <button class="calc-btn is-active" data-price="0" data-group="cms">Без CMS</button>
+                <button class="calc-btn" data-price="20000" data-group="cms">WordPress</button>
+                <button class="calc-btn" data-price="35000" data-group="cms">Кастом</button>
+              </div>
+            </div>
+            <div class="calc__group">
+              <h4>Дополнительно</h4>
+              <div class="calc__buttons">
+                <button class="calc-btn is-active" data-price="0" data-group="extra">—</button>
+                <button class="calc-btn" data-price="10000" data-group="extra">Анимации</button>
+                <button class="calc-btn" data-price="8000" data-group="extra">SEO-база</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc__total">
+            <p class="calc__label">Итого:</p>
+            <p class="calc__price">от <span id="calcTotal">25000</span> ₽</p>
+            <a href="https://t.me/Saanchoys" target="_blank" rel="noopener" class="btn btn--accent btn--full">Обсудить цену</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 9. ОБО МНЕ (без фото) ============ -->
+    <section class="section section--light" id="about">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__num">06</span>
+          <h2 class="section__title">Обо мне</h2>
+        </div>
+
+        <div class="about about--no-photo">
+          <div class="about__text reveal">
+            <h3>Привет! Я Саша 👋</h3>
+            <p>Разрабатываю сайты уже более 4 лет. Люблю аккуратный дизайн, чистый код и понятный интерфейс. Работаю с Flask, HTML, CSS, JavaScript и современными фреймворками.</p>
+            <p>Каждый проект — это партнёрство: погружаюсь в задачу, предлагаю решения и остаюсь на связи после запуска.</p>
+            <div class="stack">
+              <span>Python</span><span>Flask</span><span>HTML5</span><span>CSS3</span>
+              <span>JavaScript</span><span>Figma</span><span>Git</span>
+            </div>
+            <div class="about__buttons">
+              <a href="https://t.me/Saanchoys" target="_blank" rel="noopener" class="btn btn--accent">Telegram</a>
+              <a href="mailto:sasabelaev99@gmail.com" class="btn btn--dark">Email</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 10. FAQ ============ -->
+    <section class="section section--light" id="faq">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__num">07</span>
+          <h2 class="section__title">FAQ</h2>
+        </div>
+
+        <div class="faq">
+          <details class="faq__item reveal">
+            <summary>Сколько стоит сайт?</summary>
+            <p>Стоимость зависит от типа сайта, дизайна и функционала. Визитка — от 25 000 ₽, лендинг — от 45 000 ₽, корпоративный — от 90 000 ₽.</p>
+          </details>
+          <details class="faq__item reveal">
+            <summary>Сколько времени занимает разработка?</summary>
+            <p>Визитка — 5–7 дней, лендинг — 10–14 дней, корпоративный сайт — от 3 недель.</p>
+          </details>
+          <details class="faq__item reveal">
+            <summary>Что нужно для старта?</summary>
+            <p>Достаточно краткого описания задачи и пожеланий. Всё остальное обсудим на созвоне.</p>
+          </details>
+          <details class="faq__item reveal">
+            <summary>Есть ли поддержка после запуска?</summary>
+            <p>Да, предлагаю пакет сопровождения: правки, обновления, консультации.</p>
+          </details>
+          <details class="faq__item reveal">
+            <summary>Работаете ли вы по договору?</summary>
+            <p>Да, заключаем договор, работаем с юрлицами и ИП.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 11. КОНТАКТЫ ============ -->
+    <section class="section section--dark" id="contacts">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__num">08</span>
+          <h2 class="section__title">Контакты</h2>
+        </div>
+
+        <div class="contacts">
+          <div class="contacts__info reveal">
+            <h3>Давайте обсудим ваш проект</h3>
+            <p>Напишите мне удобным способом — отвечу в течение дня.</p>
+            <ul class="contacts__list">
+              <li>📞 <a href="tel:+70000000000">+7 (000) 000-00-00</a></li>
+              <li>✉️ <a href="mailto:sasabelaev99@gmail.com">sasabelaev99@gmail.com</a></li>
+              <li>💬 <a href="https://t.me/Saanchoys" target="_blank" rel="noopener">@Saanchoys</a></li>
+            </ul>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Имя</label>
+              <input type="text" id="name" name="name" required placeholder="Как к вам обращаться?" />
+            </div>
+            <div class="form-group">
+              <label for="contact">Email или телефон</label>
+              <input type="text" id="contact" name="contact" required placeholder="you@example.com" />
+            </div>
+            <div class="form-group">
+              <label for="message">Сообщение</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Расскажите о проекте..."></textarea>
+            </div>
+            <label class="checkbox">
+              <input type="checkbox" id="consent" name="consent" required />
+              <span>Согласен на обработку персональных данных</span>
+            </label>
+            <button type="submit" class="btn btn--accent btn--full">Отправить</button>
+            <p class="form-status" id="formStatus" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ 12. ФУТЕР ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <a href="#top" class="logo">saanchoys<span>.</span></a>
+        <p class="footer__copy">© 2025 Все права защищены.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Соцсети</h4>
+        <ul>
+          <li><a href="https://t.me/Saanchoys" target="_blank" rel="noopener">Telegram</a></li>
+          <li><a href="mailto:sasabelaev99@gmail.com">Email</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Информация</h4>
+        <ul>
+          <li><a href="#works">Проекты</a></li>
+          <li><a href="#pricing">Услуги</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Юридическая информация</h4>
+        <ul>
+          <li><a href="#">Политика конфиденциальности</a></li>
+          <li><a href="#">Публичная оферта</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
